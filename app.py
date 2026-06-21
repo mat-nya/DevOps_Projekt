@@ -1,4 +1,4 @@
-from http.server import Flask, http, server
+from http.server import server
 import json
 from urllib.parse import urlparse, parse_qs
 
