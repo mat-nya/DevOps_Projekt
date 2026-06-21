@@ -1,9 +1,9 @@
-from http.server import server
+import http.server
 import json
 from urllib.parse import urlparse, parse_qs
 
 
-class UnitConverterHandler(server.BaseHTTPRequestHandler):
+class UnitConverterHandler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
         parsed_url = urlparse(self.path)
 
@@ -44,6 +44,6 @@ class UnitConverterHandler(server.BaseHTTPRequestHandler):
 
 
 if __name__ == '__main__':
-    backend = server.HTTPServer(('0.0.0.0', 8080), UnitConverterHandler)
+    backend = http.server.HTTPServer(('0.0.0.0', 8080), UnitConverterHandler)
     print("Converter App running on port 8080...")
     backend.serve_forever()
