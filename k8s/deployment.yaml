@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: devopsprojekt422368acr.azurecr.io/app:placeholder
+          image: devopsprojekt422368acr.azurecr.io/app:ec8a28c8e87e1fed06f8db10a060ef7f452bd373
           ports:
             - containerPort: 8080
 ---

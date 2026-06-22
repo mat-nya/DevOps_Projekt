@@ -15,7 +15,7 @@ class UnitConverterHandler(http.server.BaseHTTPRequestHandler):
             self.wfile.write(json.dumps({"status": "healthy"}).encode())
             return
 
-        # Główny endpoint - konwerter
+        # Główny endpoint -konwerter
         if parsed_url.path == '/convert':
             query_components = parse_qs(parsed_url.query)
             celsius = query_components.get("celsius")
